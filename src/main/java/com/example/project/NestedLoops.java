@@ -57,7 +57,7 @@ width=5 height=5
           */
     public static String emptyBox(int width, int height) {
 
-        if (width == 1) {
+        if (width <= 1 || height <= 1) {
             return "";
         }
         String b = "";
@@ -95,7 +95,7 @@ OHELL
     public static String repeatRectangle(String word, int rows){
         String result = "";
         String c= "";
-        for (int i = 0; i<=rows; i++) {
+        for (int i = 0; i<rows; i++) {
             for (int e= i%word.length(); e <word.length(); e++){
                 c += word.charAt(e);
             }
